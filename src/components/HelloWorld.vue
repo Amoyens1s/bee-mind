@@ -10,6 +10,21 @@
 </template>
 
 <script lang="ts">
+import axios from 'axios'
+
+axios.get('接口测试')
+  .then((res) => {
+    // 处理成功情况
+    console.log(res)
+  })
+  .catch((err) => {
+    // 处理错误情况
+    console.log(err)
+  })
+  .then(() => {
+    // 总是会执行
+  })
+
 export default {
   name: 'HelloWorld',
   props: {
