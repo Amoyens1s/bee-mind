@@ -12,7 +12,7 @@
 <script lang="ts">
 import axios from 'axios'
 
-axios.get('接口测试')
+axios.get('/api/node/all')
   .then((res) => {
     // 处理成功情况
     console.log(res)

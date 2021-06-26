@@ -4749,6 +4749,11 @@
   "resolved" "https://registry.nlark.com/json-stable-stringify-without-jsonify/download/json-stable-stringify-without-jsonify-1.0.1.tgz"
   "version" "1.0.1"
 
+"json-stringify-safe@^5.0.1":
+  "integrity" "sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus="
+  "resolved" "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz"
+  "version" "5.0.1"
+
 "json3@^3.3.3":
   "integrity" "sha1-f8EON1/FrkLEcFpcwKpvYr4wW4E="
   "resolved" "https://registry.nlark.com/json3/download/json3-3.3.3.tgz"
@@ -4975,6 +4980,11 @@
   "integrity" "sha1-VYqlO0O2YeGSWgr9+japoQhf5Xo="
   "resolved" "https://registry.npm.taobao.org/lodash.merge/download/lodash.merge-4.6.2.tgz"
   "version" "4.6.2"
+
+"lodash.set@^4.3.2":
+  "integrity" "sha1-2HV7HagH3eJIFrDWqEvqGnYjCyM="
+  "resolved" "https://registry.npmjs.org/lodash.set/-/lodash.set-4.3.2.tgz"
+  "version" "4.3.2"
 
 "lodash.truncate@^4.4.2":
   "integrity" "sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM="
@@ -5312,6 +5322,16 @@
   dependencies:
     "lower-case" "^2.0.2"
     "tslib" "^2.0.3"
+
+"nock@^13.1.0":
+  "integrity" "sha512-3N3DUY8XYrxxzWazQ+nSBpiaJ3q6gcpNh4gXovC/QBxrsvNp4tq+wsLHF6mJ3nrn3lPLn7KCJqKxy/9aD+0fdw=="
+  "resolved" "https://registry.npmjs.org/nock/-/nock-13.1.0.tgz"
+  "version" "13.1.0"
+  dependencies:
+    "debug" "^4.1.0"
+    "json-stringify-safe" "^5.0.1"
+    "lodash.set" "^4.3.2"
+    "propagate" "^2.0.0"
 
 "node-fetch@^2.6.1":
   "integrity" "sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI="
@@ -6148,6 +6168,11 @@
   "integrity" "sha1-foz42PW48jnBvGi+tOt4Vn1XLvg="
   "resolved" "https://registry.nlark.com/progress/download/progress-2.0.3.tgz"
   "version" "2.0.3"
+
+"propagate@^2.0.0":
+  "integrity" "sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag=="
+  "resolved" "https://registry.npmjs.org/propagate/-/propagate-2.0.1.tgz"
+  "version" "2.0.1"
 
 "proxy-addr@~2.0.5":
   "integrity" "sha1-8Z/mnOqzEe65S0LnDowgcPm6ECU="

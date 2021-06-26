@@ -1,0 +1,38 @@
+{
+  "name": "mock-mind",
+  "author": "amoyensis",
+  "style": "default",
+  "nodes": [
+    {
+      "id": "000",
+      "content": "这是一个示例",
+      "img": "src\\assets\\logo.png",
+      "nextNode": [
+        "123",
+        "456",
+        "789"
+      ]
+    },
+    {
+      "preNode": "000",
+      "id": "123",
+      "content": "这是一个示例",
+      "img": "src\\assets\\logo.png",
+      "nextNode": []
+    },
+    {
+      "preNode": "000",
+      "id": "456",
+      "content": "这是一个示例",
+      "img": "src\\assets\\logo.png",
+      "nextNode": []
+    },
+    {
+      "preNode": "000",
+      "id": "789",
+      "content": "这是一个示例",
+      "img": "src\\assets\\logo.png",
+      "nextNode": []
+    }
+  ]
+}
