@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+	"@popperjs/core": "^2.9.2",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
     "core-js": "^3.8.3",
@@ -26,8 +27,5 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-vue": "^7.2.0"
-  },
-  "peerDependencies": {
-	"@popperjs/core": "^2.9.2"
   }
 }
