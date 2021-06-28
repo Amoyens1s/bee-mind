@@ -9,7 +9,7 @@ module.exports = {
   lintOnSave: true,
   // 服务项配置
   devServer: {
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 8080,
     https: false,
     open: true,
