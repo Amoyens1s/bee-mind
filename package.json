@@ -3,29 +3,35 @@
   "version": "0.1.0-alpha",
   "private": false,
   "scripts": {
-    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "vue-cli-service serve"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
     "core-js": "^3.8.3",
-    "vue": "^3.0.4"
+    "vue": "^3.0.4",
+    "vue-class-component": "^8.0.0-0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
     "@vue/cli-plugin-babel": "~5.0.0-beta.2",
     "@vue/cli-plugin-eslint": "~5.0.0-beta.2",
+    "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~5.0.0-beta.2",
     "@vue/compiler-sfc": "^3.0.4",
     "@vue/eslint-config-standard": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "eslint": "^7.20.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-vue": "^7.2.0"
+    "eslint-plugin-vue": "^7.2.0",
+    "typescript": "~4.1.5"
   }
 }
