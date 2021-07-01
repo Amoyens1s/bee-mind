@@ -13,6 +13,12 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import * as d3 from 'd3'
+import { http } from '@/modules/http'
+
+http.get('/api/node/all')
+  .then((res) => {
+    console.log(res)
+  })
 
 @Options({})
 export default class Home extends Vue {
