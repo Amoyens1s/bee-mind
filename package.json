@@ -12,6 +12,8 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
     "core-js": "^3.8.3",
+    "d3": "^7.0.0",
+    "reflect-metadata": "^0.1.13",
     "vue": "^3.0.4",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.3"
@@ -19,6 +21,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@types/d3": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "@vue/cli-plugin-babel": "~5.0.0-beta.2",
