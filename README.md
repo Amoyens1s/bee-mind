@@ -1,5 +1,5 @@
 # bee-mind
-
+![example workflow](https://github.com/Amoyens1s/bee-mind/workflows/main.yml/badge.svg)
 ## Project setup
 ```
 yarn install
