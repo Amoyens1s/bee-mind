@@ -1,0 +1,26 @@
+name: CI / 持续集成 流水线
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 流水线启动 / CI Workflow Start
+        run: echo Start!
+
+      - name: 安装依赖 / Install Dependencies
+        run: yarn install
+        
+      - name: Lint检查 / Lint Test
+        run: yarn run lint
+
+      - name: 编译测试 / Build Test
+        run: yarn run build
