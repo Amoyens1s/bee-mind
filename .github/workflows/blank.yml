@@ -1,5 +1,5 @@
-name: CI / 持续集成 流水线
-
+# CI/持续集成 流水线
+name: CI
 on:
   push:
     branches: [ main ]
