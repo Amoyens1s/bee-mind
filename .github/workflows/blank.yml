@@ -26,22 +26,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
+      # 启动流水线
       - name: Run a one-line script
         run: echo CI流水线启动!
         
-      # Runs a single command using the runners shell
+      # 安装依赖
       - name: Run a one-line script
         run: yarn install
         
       # 检查代码规则与风格是否符合要求
       - name: Run a one-line script
-        run: npm run lint
-
-      # 启动开发环境
-      - name: 启动测试
-        run: npm run start
+        run: yarn run lint
        
       # 编译
       - name: 编译测试
-        run: npm run build
+        run: yarn run build
