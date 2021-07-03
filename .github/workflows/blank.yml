@@ -30,6 +30,10 @@ jobs:
       - name: Run a one-line script
         run: echo CI流水线启动!
         
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: yarn install
+        
       # 检查代码规则与风格是否符合要求
       - name: Run a one-line script
         run: npm run lint
