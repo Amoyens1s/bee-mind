@@ -1,7 +1,7 @@
 <template>
   <button @click="add()">123</button>
-  <MindNode :customStyle="'blue'"></MindNode>
   <container>
+    <MindNode></MindNode>
   </container>
 </template>
 
@@ -27,7 +27,7 @@ export default class Home extends Vue {
 }
 </script>
 
-<style>
+<style scoped>
   container {
     display: block;
     background-color: tomato;

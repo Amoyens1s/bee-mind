@@ -1,18 +1,17 @@
 <template>
-  <section>
-    {{customStyle}}
-    <!-- 似乎无法使用props改变class -->
-    <div id="node" class="customStyle"
-      @click="enable($event.target)"
-      @blur="disable($event.target)"
-    >
-      请双击输入内容
-    </div>
-  </section>
+  <div class="border">
+    <section>
+      <div ref="input" id="node" tabindex="0"
+        @dblclick="enable($event.target)"
+      >
+        请双击输入内容
+      </div>
+      <div id="slider"></div>
+    </section>
+  </div>
 </template>
 
 <script lang="ts">
-
 import { Options, Vue } from 'vue-class-component'
 
 @Options({
@@ -21,39 +20,55 @@ import { Options, Vue } from 'vue-class-component'
   }
 })
 export default class MindNode extends Vue {
-  mounted () {
-    console.log(this.customStyle)
+  slider!: HTMLElement
+  declare $refs: {
+    input: HTMLElement
   }
 
-  get customStyle (): string {
-    return this.customStyle
-  }
-
-  public enable (target: any) {
-    // 双击使输入框变为可编辑状态，但目前还有些问题
-    target.contentEditable = 'true'
-  }
-
-  public disable (target: any) {
-    target.removeAttribute('contenteditable')
-  }
-
-  unmounted () {
+  public enable (target: EventTarget | null) {
+    if (this.$refs.input.contentEditable) {
+      if (document) {
+        document.onclick = (event) => {
+          if (event.target !== target) {
+            this.$refs.input.removeAttribute('contenteditable')
+          }
+        }
+      }
+    }
+    this.$refs.input.contentEditable = 'true'
   }
 }
 </script>
 
 <style scoped>
-  #node {
-    background-color:#f0f0f0;
-    border:solid red 1px;
-    padding:10px 40px;
-    width:300px;
-    resize: horizontal;
-    overflow:auto;
+  .border {
+    border: 1px solid;
+    border-color: blue;
+    display: block;
+    width: 20vw;
   }
 
-  .blue {
-    background-color:black !important;
+  section {
+    display: flex;
+  }
+
+  #node {
+    background-color:#f0f0f0;
+    padding:10px 40px;
+    width:300px;
+    overflow:auto;
+    outline: none;
+    flex:1;
+  }
+
+  #node:focus {
+    transition: 50ms;
+    border-bottom: 3px solid;
+    border-color: blue;
+  }
+
+  [contenteditable] {
+    outline: none;
+    border: 0;
   }
 </style>
