@@ -46,3 +46,8 @@ import { Options, Vue } from 'vue-class-component'
 })
 export default class NavBar extends Vue {}
 </script>
+<style scoped>
+ navbar {
+   height: 10vh;
+ }
+</style>
