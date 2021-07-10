@@ -3,11 +3,13 @@
     <section>
       <div ref="input" id="node" tabindex="0"
         @dblclick="enable($event.target)"
+        @focus="focus()"
       >
         请双击输入内容
       </div>
-      <div id="slider"></div>
     </section>
+    <hr v-if="showHR" size="5" class="animate__animated animate__fadeInLeft">
+    <hr v-if="!showHR" size="5" class="animate__animated animate__fadeOutLeft">
   </div>
 </template>
 
@@ -20,7 +22,7 @@ import { Options, Vue } from 'vue-class-component'
   }
 })
 export default class MindNode extends Vue {
-  slider!: HTMLElement
+  showHR: boolean = false
   declare $refs: {
     input: HTMLElement
   }
@@ -31,11 +33,16 @@ export default class MindNode extends Vue {
         document.onclick = (event) => {
           if (event.target !== target) {
             this.$refs.input.removeAttribute('contenteditable')
+            this.showHR = false
           }
         }
       }
     }
     this.$refs.input.contentEditable = 'true'
+  }
+
+  public focus () {
+    this.showHR = true
   }
 }
 </script>
@@ -48,23 +55,21 @@ export default class MindNode extends Vue {
     width: 20vw;
   }
 
+  hr {
+    margin: 0;
+    color: blue;
+  }
   section {
     display: flex;
   }
 
   #node {
-    background-color:#f0f0f0;
+    background-color:#ffffff;
     padding:10px 40px;
     width:300px;
     overflow:auto;
     outline: none;
     flex:1;
-  }
-
-  #node:focus {
-    transition: 50ms;
-    border-bottom: 3px solid;
-    border-color: blue;
   }
 
   [contenteditable] {
